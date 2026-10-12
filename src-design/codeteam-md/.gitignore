@@ -1,0 +1,21 @@
+# 个性化文件隔离（团队级管理，设计 §11.2）
+# 单一数据源：个性化内容就地存放原目录，用 .gitignore 排除上游同步
+
+# 用户习惯与纠错——属于个人，不上传上游
+SHARED/MEMORY/core/user_preferences.md
+SHARED/MEMORY/recall/correction_cases.md
+SHARED/MEMORY/archive/
+
+# 各任务运行态数据
+SHARED/TASKS/TASK-*/
+
+# 个人自定义/升级后的技能（区别于上游通用技能）
+ROLES/*/skills/
+SHARED/SKILLS/archive/
+
+# 进化报告
+ROLES/Administrator/reports/*
+!ROLES/Administrator/reports/.gitkeep
+
+# 注：project_summary.md、decisions_log.md 是否上传由团队决定
+# 多人协作同一项目可共享，纯个人项目可一并 ignore
